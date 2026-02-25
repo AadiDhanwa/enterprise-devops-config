@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: bank-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: bank
+
+  template:
+    metadata:
+      labels:
+        app: bank
+
+    spec:
+      containers:
+      - name: bank-container
+        image: mohdaadil1/bank:latest
+        ports:
+        - containerPort: 5000
