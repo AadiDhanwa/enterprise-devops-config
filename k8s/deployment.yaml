@@ -20,5 +20,6 @@ spec:
       containers:
       - name: bank-container
         image: mohdaadil1/bank:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
